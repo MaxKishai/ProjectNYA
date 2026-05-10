@@ -31,7 +31,26 @@
             <p>&copy; 2026 Проектна робота. Розроблено для курсу "Управління ІТ-проектами".</p>
         </div>
     </footer>
+<div id="modal-overlay" class="modal-overlay">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <h3 id="modal-title">Назва збору</h3>
+            <p id="modal-status" class="modal-status">Статус</p>
+            
+            <div id="financial-block">
+                <div class="progress-container">
+                    <div id="progress-bar" class="progress-bar"></div>
+                </div>
+                <button class="btn btn-donate" onclick="alert('Дякуємо! У реальному проекті тут відкриється платіжна система.')">Задонатити</button>
+            </div>
 
+            <div id="volunteer-block" style="display: none;">
+                <input type="text" id="volunteer-name" class="modal-input" placeholder="Введіть ваше ПІБ">
+                <input type="tel" id="volunteer-phone" class="modal-input" placeholder="Ваш номер телефону">
+                <button class="btn btn-volunteer" onclick="alert('Дякуємо за реєстрацію! Ваш контакт передано координатору.')">Записатися</button>
+            </div>
+        </div>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>
