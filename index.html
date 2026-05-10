@@ -45,8 +45,8 @@
             </div>
 
             <div id="volunteer-block" style="display: none;">
-                <input type="text" id="volunteer-name" class="modal-input" placeholder="Введіть ваше ПІБ">
-                <input type="tel" id="volunteer-phone" class="modal-input" placeholder="Ваш номер телефону">
+                <input type="text" id="volunteer-name" class="modal-input" placeholder="Введіть ваше ПІБ" oninput="this.value = this.value.replace(/[0-9]/g, '')">
+<input type="tel" id="volunteer-phone" class="modal-input" placeholder="Ваш номер телефону" oninput="this.value = this.value.replace(/[^0-9+]/g, '')">
                 <button class="btn btn-volunteer" onclick="alert('Дякуємо за реєстрацію! Ваш контакт передано координатору.')">Записатися</button>
             </div>
         </div>
