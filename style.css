@@ -170,3 +170,59 @@ footer {
 }tn-volunteer:hover {
     background-color: #2980b9;
 }
+/* --- КРУТІ СТИЛІ ДЛЯ ІНПУТІВ --- */
+.modal-input {
+    width: 100%;
+    padding: 14px 15px;
+    margin: 10px 0 20px; /* Трохи більше відступу знизу */
+    border: 2px solid #e0e6ed;
+    border-radius: 8px;
+    font-size: 16px;
+    outline: none;
+    transition: all 0.3s ease;
+    background-color: #f8fafc;
+    color: #2c3e50;
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.modal-input::placeholder {
+    color: #a0aec0;
+}
+
+/* Ефект світіння, коли ти клікаєш на поле вводу */
+.modal-input:focus {
+    border-color: #1abc9c; /* Фірмовий зелений */
+    background-color: #fff;
+    box-shadow: 0 0 0 3px rgba(26, 188, 156, 0.2); 
+}
+
+/* --- КРУТІ СТИЛІ ДЛЯ ПРОГРЕС-БАРУ --- */
+.progress-container {
+    width: 100%;
+    background: #e9ecef;
+    border-radius: 20px; /* Більш круглі краї */
+    height: 24px; /* Трохи товстіша смужка */
+    margin: 20px 0;
+    overflow: hidden;
+    box-shadow: inset 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.progress-bar {
+    height: 100%;
+    /* Робимо красивий градієнт замість одного кольору */
+    background: linear-gradient(90deg, #1abc9c, #2ecc71);
+    width: 0%;
+    border-radius: 20px;
+    /* Дуже плавна анімація заповнення */
+    transition: width 1.2s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+}
+
+/* Додаємо легкий ефект об'єму (відблиск зверху) на саму смужку */
+.progress-bar::after {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; bottom: 0; right: 0;
+    background: linear-gradient(rgba(255,255,255,0.25) 0%, rgba(255,255,255,0) 100%);
+    border-radius: 20px;
+}
